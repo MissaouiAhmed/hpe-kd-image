@@ -1,1 +1,1 @@
-docker build Dockerfile
+docker build .  -t  dockeridam:kdninfi
