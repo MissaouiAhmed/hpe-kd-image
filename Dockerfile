@@ -7,5 +7,7 @@ RUN cd /opt && \
     unzip minifi-1.19.0-bin.zip && \
     rm minifi-1.19.0-bin.zip
 RUN mkdir -p /opt/configscripts/
+
+COPY startscript /opt/guestconfig/
 RUN cd /opt/configscripts/ && \
     wget https://github.com/MissaouiAhmed/hpe-kd-config/releases/download/refs%2Fheads%2Fmain/appconfig.tgz --no-check-certificate
