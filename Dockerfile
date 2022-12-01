@@ -7,6 +7,7 @@ RUN cd /opt && \
     unzip minifi-1.19.0-bin.zip && \
     rm minifi-1.19.0-bin.zip
 RUN mkdir -p /opt/configscript/
+RUN mkdir -p /data
 
 
 RUN cd /opt/configscript/ && \
