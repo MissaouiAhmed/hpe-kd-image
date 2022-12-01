@@ -16,6 +16,7 @@ RUN chmod 755 /opt/configscript/appconfig.tgz
 
 
 EXPOSE 8787
+CMD ["/init"]
 
 
 
