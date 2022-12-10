@@ -13,6 +13,7 @@ RUN mkdir -p /data
 RUN cd /opt/configscript/ && \
     wget https://github.com/MissaouiAhmed/hpe-kd-config/releases/download/refs%2Fheads%2Fmain/appconfig.tgz --no-check-certificate
 RUN chmod 755 /opt/configscript/appconfig.tgz
+RUN ln /usr/bin/python2 /usr/bin/python
 EXPOSE 8787
 CMD ["/init"]
 
