@@ -14,6 +14,7 @@ RUN cd /opt/configscript/ && \
     wget https://github.com/MissaouiAhmed/hpe-kd-config/releases/download/refs%2Fheads%2Fmain/appconfig.tgz --no-check-certificate
 RUN chmod 755 /opt/configscript/appconfig.tgz
 EXPOSE 8787
+CMD ["/init"]
 
 
 
