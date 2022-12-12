@@ -15,6 +15,7 @@ RUN cd /opt/configscript/ && \
 RUN chmod 755 /opt/configscript/appconfig.tgz
 RUN ln /usr/bin/python2 /usr/bin/python
 EXPOSE 8787
+RUN echo "docker://`cat  /proc/self/cgroup | head -1  | cut -d/ -f4` "  >> /opt/guestconfig/configure.status
 CMD ["/init"]
 
 
