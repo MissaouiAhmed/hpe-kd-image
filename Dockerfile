@@ -17,6 +17,8 @@ RUN ln /usr/bin/python2 /usr/bin/python
 EXPOSE 8787
 RUN mkdir -p /opt/guestconfig/
 RUN echo "docker://`cat  /proc/self/cgroup | head -1  | cut -d/ -f4` "  >> /opt/guestconfig/configure.status
+RUN echo ""  >> /opt/guestconfig/configure.stdout
+RUN echo ""  >> /opt/guestconfig/configure.stderr
 CMD ["/init"]
 
 
